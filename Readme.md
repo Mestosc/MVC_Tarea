@@ -69,6 +69,7 @@ sequenceDiagram
     View-->>Controller: boolean
     deactivate View
 ```
+# Diagrama propio
 Diagrama de secuencia propio, hecho en Mermaid
 ```mermaid
 sequenceDiagram
