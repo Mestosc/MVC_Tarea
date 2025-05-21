@@ -18,7 +18,7 @@ public class View {
                 case 1 -> {
                     System.out.println("Coche " + crearCoche() + " creado.");
                 } case 2 ->  {
-                    System.out.println("Nueva velocidad: " + cambiarVelocidad());
+                    System.out.println("Nueva velocidad: " + cambiarVelocidad()); // Añadiendo cosas
                 } case 3 -> {
                     var matricula = pedirMatricula();
                     muestraVelocidad(matricula,Controller.obtenerVelocidad(matricula));
