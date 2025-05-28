@@ -1,4 +1,3 @@
-import org.junit.jupiter.params.provider.EnumSource;
 
 import java.util.ArrayList;
 
@@ -63,5 +62,25 @@ public class Controller {
     }
     public static int obtenerVelocidad(String matricula) {
         return Model.getVelocidad(matricula);
+    }
+
+    /**
+     * Metodo para hacer avanzar el vehiculo, le pasa al model la informacion
+     * @param metrosAvanzar los metros que se desea avanzar
+     * @param matricula la matricula del vehiculo
+     * @return Los metros que avanzo que se devuelven desde el metodo que cambia eso en el <a href="Model">Model</a>
+     */
+    public static int avanzar(int metrosAvanzar, String matricula) {
+        return Model.avanzar(metrosAvanzar,matricula);
+    }
+
+    /**
+     * Metodo para repostar el vehiculo, le pasa al model la informacion
+     * @param listrosGasolina los litros de gasolina a añadir
+     * @param matricula la matricula del vehiculo a añadirle los litros
+     * @return los resultados que de el model
+     */
+    public static int ponerGasolina(int listrosGasolina, String matricula) {
+        return Model.ponerGasolina(listrosGasolina,matricula);
     }
 }

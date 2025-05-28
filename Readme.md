@@ -2,6 +2,19 @@
 
 Aplicación que trabaja con objetos coches, modifica la velocidad y la muestra
 
+## Cambios que decidi hacer
+
+Los cambios que decidi hacer y que luego me di cuenta son:
+
+1. Retorno de la funcion avanzar en el model hago que retorne los metros que avanzo, al llamar a la funcion y no los metros totales que avanzo más los actuales
+2. Se me olvido en avanzar poner lo de quitar gasolina en el pseudocodigo y en el diagrama de secuencia solo represente procesos pero no lo especifique asi que bueno, lo hare que en funcion de la velocidad y asi haga la resta pero si da menos que 0 lo pongo a 0
+basicamente la formula que he sacado es algo asi
+```java
+int vel = 1;
+if (coche.velocidad>1) vel = coche.velocidad;
+coche.cantidadGasolina += vel / -metrosAvanzar;
+if (coche.cantidadGasolina<0) coche.cantidadGasolina = 0;
+```
 ---
 ## Diagrama de clases:
 
