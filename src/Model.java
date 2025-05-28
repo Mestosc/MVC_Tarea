@@ -68,9 +68,27 @@ public class Model {
         return  velocidad;
     }
 
+    /**
+     * Avanza el vehiculo y refleja el avance
+     * @param metrosAvanzar los metros que se desea avanzar
+     * @param matricula la matricula del vehiculo que desea hacer avanzar
+     * @return Los metros que avanzo esta vez
+     */
     public static int avanzar(int metrosAvanzar, String matricula) {
         Coche coche = getCoche(matricula);
         coche.metrosAvanzo += metrosAvanzar;
         return metrosAvanzar;
+    }
+
+    /**
+     * Sirve para repostar el vehiculo
+     * @param listrosGasolina los litros de gasolina a añadir
+     * @param matricula la matricula del vehiculo
+     * @return la cantidad de total de gasolina con el incremento
+     */
+    public static int ponerGasolina(int listrosGasolina, String matricula) {
+        Coche c = getCoche(matricula);
+        c.cantidadGasolina += listrosGasolina;
+        return c.cantidadGasolina;
     }
 }

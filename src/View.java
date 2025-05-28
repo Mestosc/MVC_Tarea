@@ -12,7 +12,7 @@ public class View {
         Scanner sc = new Scanner(System.in);
         int opcion;
         do {
-            System.out.println("1.Crear Coche\n2.Cambiar Velocidad\n3.Mostrar Velocidad\n4.Subir velocidad\n5.Bajar velocidad\n6.Mostrar coches\n7.Mostrar coche\n8.Salir");
+            System.out.println("1.Crear Coche\n2.Cambiar Velocidad\n3.Mostrar Velocidad\n4.Subir velocidad\n5.Bajar velocidad\n6.Mostrar coches\n7.Mostrar coche\n8.Poner gasolina\n9.Avanzar\n10.Salir");
             opcion = sc.nextInt();
             switch (opcion) {
                 case 1 -> {
@@ -33,9 +33,13 @@ public class View {
                 } case 7 -> {
                     var matricula = pedirMatricula();
                     mostrarCoche(matricula);
+                } case 8 -> {
+                    ponerGasolina();
+                } case 9 -> {
+                    avanzar();
                 }
             }
-        } while (opcion!=8);
+        } while (opcion!=10);
     }
 
     /**
@@ -109,13 +113,31 @@ public class View {
             System.out.println(matricula + ": " + v + "km/hr");
             return true;
     }
+
+    /**
+     * PseudoInterfaz para llevar a cabo el avance, pide los datos necesarios
+     */
     private static void avanzar() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Cuantos metros desea avanzar");
         var metrosAvanzar = sc.nextInt();
         System.out.print("Digame la matricula del vehiculo");
         var matricula = sc.next();
-        Controller.avanzar(metrosAvanzar,matricula);
+        int metrosAvanzo = Controller.avanzar(metrosAvanzar,matricula);
+        System.out.println("Avanzo " + metrosAvanzo + " m");
+    }
+
+    /**
+     * PseudoInterfaz para poner gasolina, pide los datos necesarios
+     */
+    private static void ponerGasolina() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Deme los litros de gasolina que desee repostar");
+        var listrosGasolina = sc.nextInt();
+        System.out.print("Digame la matricula del vehiculo que desee repostar");
+        var matricula = sc.next();
+        listrosGasolina = Controller.ponerGasolina(listrosGasolina,matricula);
+        System.out.println("Ahora hay " + listrosGasolina + " litros en el deposito");
     }
     /**
      * Pide toda la informacion necesaria al usuario para proceder a la creacion de un vehiculo
