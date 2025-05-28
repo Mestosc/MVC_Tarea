@@ -64,4 +64,8 @@ public class Controller {
     public static int obtenerVelocidad(String matricula) {
         return Model.getVelocidad(matricula);
     }
+
+    public static int avanzar(int metrosAvanzar, String matricula) {
+        return
+    }
 }

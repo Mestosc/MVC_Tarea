@@ -109,7 +109,14 @@ public class View {
             System.out.println(matricula + ": " + v + "km/hr");
             return true;
     }
-
+    private static void avanzar() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Cuantos metros desea avanzar");
+        var metrosAvanzar = sc.nextInt();
+        System.out.print("Digame la matricula del vehiculo");
+        var matricula = sc.next();
+        Controller.avanzar(metrosAvanzar,matricula);
+    }
     /**
      * Pide toda la informacion necesaria al usuario para proceder a la creacion de un vehiculo
      * @return la matricula del coche
