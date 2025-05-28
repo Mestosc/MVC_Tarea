@@ -77,6 +77,8 @@ public class Model {
     public static int avanzar(int metrosAvanzar, String matricula) {
         Coche coche = getCoche(matricula);
         coche.metrosAvanzo += metrosAvanzar;
+        coche.cantidadGasolina -= 10;
+        if (coche.cantidadGasolina<0) coche.cantidadGasolina = 0;
         return metrosAvanzar;
     }
 
