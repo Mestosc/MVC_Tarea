@@ -119,9 +119,9 @@ public class View {
      */
     private static void avanzar() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Cuantos metros desea avanzar");
+        System.out.print("Cuantos metros desea avanzar:");
         var metrosAvanzar = sc.nextInt();
-        System.out.print("Digame la matricula del vehiculo");
+        System.out.print("Digame la matricula del vehiculo:");
         var matricula = sc.next();
         int metrosAvanzo = Controller.avanzar(metrosAvanzar,matricula);
         System.out.println("Avanzo " + metrosAvanzo + " m");
