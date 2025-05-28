@@ -67,4 +67,10 @@ public class Model {
         cambiarVelocidad(matricula, velocidad);
         return  velocidad;
     }
+
+    public static int avanzar(int metrosAvanzar, String matricula) {
+        Coche coche = getCoche(matricula);
+        coche.metrosAvanzo += metrosAvanzar;
+        return metrosAvanzar;
+    }
 }

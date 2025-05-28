@@ -2,6 +2,13 @@
 
 Aplicación que trabaja con objetos coches, modifica la velocidad y la muestra
 
+## Cambios que decidi hacer
+
+Los cambios que decidi hacer y que luego me di cuenta son:
+
+1. Retorno de la funcion avanzar en el model hago que retorne los metros que avanzo, al llamar a la funcion y no los metros totales que avanzo más los actuales
+2. 
+
 ---
 ## Diagrama de clases:
 

@@ -2,7 +2,8 @@ public class Coche {
     String matricula;
     String modelo;
     Integer velocidad;
-
+    Integer cantidadGasolina;
+    Integer metrosAvanzo;
     /**
      * Constructor de objetos coche
      * @param modelo el modelo de coche a establecer

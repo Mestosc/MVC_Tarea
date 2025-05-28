@@ -66,6 +66,6 @@ public class Controller {
     }
 
     public static int avanzar(int metrosAvanzar, String matricula) {
-        return
+        return Model.avanzar(metrosAvanzar,matricula);
     }
 }
