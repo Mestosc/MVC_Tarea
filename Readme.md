@@ -14,8 +14,12 @@ coche.cantidadGasolina -= (metrosAvanzar+coche.velocidad)/2;
 ```
 3. Tambien aunque seria más ortodoxo el uso de Interfaces como Observable y Observer que describiste en la rama Observer de tu repositorio de solucion de MVC, dado a que facilita la implementacion de multiples Observer, pues como tal yo no he hecho eso porque es más complejo y no es necesario para esto, aunque a lo mejor lo hago
 
+## Captura de la demostracion 
+
+![img.png](img.png)
+
 ---
-## DIagrama con Observer de gasolina
+## Diagrama con Observer de gasolina
 ```mermaid
 sequenceDiagram
     participant View
