@@ -12,8 +12,8 @@ basicamente la formula que he sacado es algo asi, he cambiado la forma en la que
 ```java
 coche.cantidadGasolina -= (metrosAvanzar+coche.velocidad)/2;
 ```
-3. Tambien aunque seria más ortodoxo el uso de Interfaces como Observable y Observer que describiste en la rama Observer de tu repositorio de solucion de MVC, dado a que facilita la implementacion de multiples Observer, pues como tal yo no he hecho eso porque es más complejo y no es necesario para esto, aunque a lo mejor lo hago
-
+3. Tambien aunque seria más ortodoxo el uso de Interfaces como Observable y Observer que describiste en la rama Observer de tu repositorio de solucion de MVC, dado a que facilita la implementacion de multiples Observer, pues como tal yo no he hecho eso porque es más complejo y no es necesario para esto, aunque a lo mejor lo hago, digo qeu hoy estoy algo vago para hacer eso, aunque en otra circunstacia lo haria
+4. Tambien he intentado implementarlo con interfaces porque es objetivamente mejor pero me hice el lio, y francamente no me apetecia pensarmelo tanto aunque creo que solo habria tenido que cambiar algunas cosas, a lo mejor meto
 ## Captura de la demostracion 
 
 ![img.png](img.png)
