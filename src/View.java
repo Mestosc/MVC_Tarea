@@ -92,7 +92,9 @@ public class View {
         System.out.println("No existen coches");
         return null;
     }
-
+    public static void alertarGasolina(Integer gasolina) {
+        System.out.println("Alerta Repostar quedan " + gasolina);
+    }
     /**
      * Pide la matricula de un vehiculo
      * @return la matricula de ese vehiculo

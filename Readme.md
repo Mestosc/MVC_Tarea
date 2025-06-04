@@ -16,6 +16,27 @@ coche.cantidadGasolina += vel / -metrosAvanzar;
 if (coche.cantidadGasolina<0) coche.cantidadGasolina = 0;
 ```
 ---
+## DIagrama con Observer de gasolina
+```mermaid
+sequenceDiagram
+    participant View
+    box gray Controlador
+    participant Controller
+    participant observoGasolina
+    end
+    participant Model
+
+    Controller->>Model: avanzar()
+    activate Model
+    Model->>observoGasolina: update()
+    deactivate Model
+    activate observoGasolina
+    observoLimite->>View: alertar
+    deactivate observoGasolina
+    activate View
+    View->>View: sout()
+    deactivate View
+```
 ## Diagrama de clases:
 
 ```mermaid

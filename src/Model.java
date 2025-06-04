@@ -17,7 +17,9 @@ public class Model {
         parking.add(aux);
         return aux;
     }
-
+    public static void notifyObservers() {
+        ObserverGasolina.update();
+    }
     /**
      * Busca coche segun matricula
      * @param matricula a buscar
@@ -80,6 +82,7 @@ public class Model {
         int vel = 1;
         if (coche.velocidad>1) vel = coche.velocidad;
         coche.cantidadGasolina += vel / -metrosAvanzar;
+        notifyObservers();
         if (coche.cantidadGasolina<0) coche.cantidadGasolina = 0;
         return metrosAvanzar;
     }
