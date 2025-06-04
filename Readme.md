@@ -31,7 +31,7 @@ sequenceDiagram
     Model->>observoGasolina: update()
     deactivate Model
     activate observoGasolina
-    observoLimite->>View: alertar
+    observoLimite->>View: alertarGasolina()
     deactivate observoGasolina
     activate View
     View->>View: sout()
