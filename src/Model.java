@@ -79,9 +79,7 @@ public class Model {
     public static int avanzar(int metrosAvanzar, String matricula) {
         Coche coche = getCoche(matricula);
         coche.metrosAvanzo += metrosAvanzar;
-        int vel = 1;
-        if (coche.velocidad>1) vel = coche.velocidad;
-        coche.cantidadGasolina += vel / -metrosAvanzar;
+        coche.cantidadGasolina -= (metrosAvanzar+coche.velocidad)/2;
         if (coche.cantidadGasolina<0) coche.cantidadGasolina = 0;
         notifyObservers(coche);
         return metrosAvanzar;
